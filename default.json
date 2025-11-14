@@ -1,7 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    "security:openssf-scorecard"
   ],
   "semanticCommits": "enabled",
   "semanticCommitType": "chore",
@@ -41,6 +42,9 @@
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "automerge": true,
       "automergeType": "branch"
+    },
+    "vulnerabilityAlerts": {
+      "addLabels": ["security"]
     }
   ]
 }
