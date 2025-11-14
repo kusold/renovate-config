@@ -31,7 +31,7 @@
     {
       "matchManagers": ["github-actions"],
       "addLabels": ["github_actions"],
-      "rangeStrategy": "pin"
+      "rangeStrategy": "pin",
       "minimumReleaseAge": "3 days",
       "internalChecksFilter": "strict",
       "prCreation": "not-pending"
