@@ -43,8 +43,8 @@
       "automerge": true,
       "automergeType": "branch"
     },
-    "vulnerabilityAlerts": {
-      "addLabels": ["security"]
-    }
-  ]
+  ],
+  "vulnerabilityAlerts": {
+    "addLabels": ["security"]
+  }
 }
