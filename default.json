@@ -30,6 +30,14 @@
       "addLabels": ["go"]
     },
     {
+      "matchManagers": ["gomod"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0\\./",
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    },
+    {
       "matchManagers": ["github-actions"],
       "addLabels": ["github_actions"],
       "rangeStrategy": "pin",
