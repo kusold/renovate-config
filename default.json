@@ -38,6 +38,13 @@
       "platformAutomerge": true
     },
     {
+      "matchManagers": ["gomod"],
+      "matchUpdateTypes": ["digest"],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    },
+    {
       "matchManagers": ["github-actions"],
       "addLabels": ["github_actions"],
       "rangeStrategy": "pin",
