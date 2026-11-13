@@ -22,7 +22,7 @@
       "addLabels": ["deps-patch"]
     },
     {
-      "matchUpdateTypes": ["digest"],
+      "matchUpdateTypes": ["digest", "pinDigest"],
       "addLabels": ["deps-digest"]
     },
     {
@@ -31,15 +31,32 @@
     },
     {
       "matchManagers": ["gomod"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchCurrentVersion": "!/^0\\./",
+      "matchDepTypes": ["require"],
+      "addLabels": ["direct-dependency"]
+    },
+    {
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["indirect"],
+      "addLabels": ["indirect-dependency"]
+    },
+    {
+      "matchManagers": ["dockerfile"],
+      "addLabels": ["docker"]
+    },
+    {
+      "matchDepTypes": ["container"],
+      "addLabels": ["container"]
+    },
+    {
+      "matchUpdateTypes": ["digest", "pinDigest"],
       "automerge": true,
       "automergeType": "pr",
       "platformAutomerge": true
     },
     {
       "matchManagers": ["gomod"],
-      "matchUpdateTypes": ["digest"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0\\./",
       "automerge": true,
       "automergeType": "pr",
       "platformAutomerge": true
@@ -54,7 +71,7 @@
     },
     {
       "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "patch", "digest"],
+      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
       "automergeType": "branch"
     },
