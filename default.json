@@ -74,9 +74,11 @@
       "matchUpdateTypes": ["minor", "patch", "pin"],
       "automerge": true,
       "automergeType": "branch"
-    },
+    }
   ],
+  "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": {
+    "enabled": true,
     "addLabels": ["security"]
   }
 }
